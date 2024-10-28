@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BMI Calculator</title>
+    <meta name="description" content="JS app to calculates Body Mass Index">
+    <link rel="stylesheet" href="style.css">
+     <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="container">
+        <h2>Body Mass Index Calculator</h2>
+        <div class="chart">
+        <table>
+            <thead>
+            <tr>
+                <th>BMI</th>
+                <th>Category</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td data-column="bmi">less than 18.5</td>
+                <td data-column="category">Underweight</td>
+            </tr>
+            <tr>
+                <td data-column="bmi">between 18.5 and 24.9</td>
+                <td data-column="category">Ideal</td>
+            </tr>
+            <tr>
+                <td data-column="bmi">between 25 and 29.9</td>
+                <td data-column="category">Overweight</td>
+            </tr>
+            <tr>
+                <td data-column="bmi">over 30 </td>
+                <td data-column="category">Obesity</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="bmi">
+            
+            <p class="text">Height in cm</p><input type="text" id="height"> 
+            <select id="heightUnit">
+                <option value="cm">cm</option>
+                <option value="ft">ft</option>
+            </select>
+            <p class="text">Weight in kg</p><input type="text" id="weight">
+            <p id="result"></p><button id="btn">Calculate</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <footer class="footer">
+      <p class="footer__title">AVINASH JAGANATH</p>
+      <div class="footer__social">
+          <a href="https://github.com/Avinashjaganath" class="footer__icon"><i class='bx bxl-github' ></i></a>
+          <a href="www.linkedin.com/in/avinash-jaganath-0957a026a" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
+      </div>
+     </footer>
+  </body>
+</html>
