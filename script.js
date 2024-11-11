@@ -31,18 +31,18 @@ function calculateBMI() {
     if (bmi < 18.5) {
         category = 'Underweight';
         const weightToGain = (idealWeightMin - weight).toFixed(2);
-        message = `You need to gain approximately ${weightToGain} kg to reach the ideal weight range (${idealWeightMin} - ${idealWeightMax} kg).`;
+        message = `You need to gain approximately ${idealWeightMin} - ${idealWeightMax} kg to reach the ideal weight range (${weightToGain} kg).`;
     } else if (bmi >= 18.5 && bmi <= 24.9) {
         category = 'Ideal';
         message = `You are within the ideal weight range (${idealWeightMin} - ${idealWeightMax} kg).`;
     } else if (bmi >= 25 && bmi <= 29.9) {
         category = 'Overweight';
         const weightToLose = (weight - idealWeightMax).toFixed(2);
-        message = `You need to lose approximately ${weightToLose} kg to reach the ideal weight range (${idealWeightMin} - ${idealWeightMax} kg).`;
+        message = `You need to lose approximately ${idealWeightMin} - ${idealWeightMax} kg to reach the ideal weight range ( ${weightToGain}kg).`;
     } else {
         category = 'Obesity';
         const weightToLose = (weight - idealWeightMax).toFixed(2);
-        message = `You need to lose approximately ${weightToLose} kg to reach the ideal weight range (${idealWeightMin} - ${idealWeightMax} kg).`;
+        message = `You need to lose approximately ${idealWeightMin} - ${idealWeightMax} kg to reach the ideal weight range (${weightToGain} kg).`;
     }
 
     // Display the result
