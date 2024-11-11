@@ -38,11 +38,11 @@ function calculateBMI() {
     } else if (bmi >= 25 && bmi <= 29.9) {
         category = 'Overweight';
         const weightToLose = (weight - idealWeightMax).toFixed(2);
-        message = `You need to lose approximately ${idealWeightMin} - ${idealWeightMax} kg to reach the ideal weight range ( ${weightToGain}kg).`;
+        message = `You need to lose approximately ${idealWeightMin} - ${idealWeightMax} kg to reach the ideal weight range ( ${weightToLoss}kg).`;
     } else {
         category = 'Obesity';
         const weightToLose = (weight - idealWeightMax).toFixed(2);
-        message = `You need to lose approximately ${idealWeightMin} - ${idealWeightMax} kg to reach the ideal weight range (${weightToGain} kg).`;
+        message = `You need to lose approximately ${idealWeightMin} - ${idealWeightMax} kg to reach the ideal weight range (${weightToLoss} kg).`;
     }
 
     // Display the result
